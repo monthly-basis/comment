@@ -3,6 +3,7 @@
 return [
     'modules' => [
         'LeoGalleguillos\Comment',
+        'LeoGalleguillos\Flash',
         'Zend\Db',
         'Zend\Router',
     ],
