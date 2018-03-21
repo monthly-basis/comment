@@ -26,6 +26,11 @@ class Module
     {
         return [
             'factories' => [
+                CommentFactory\Comment::class => function ($serviceManager) {
+                    return new CommentFactory\Comment(
+                        $serviceManager->get(CommentTable\Comment::class)
+                    );
+                },
                 CommentTable\Comment::class => function ($serviceManager) {
                     return new CommentTable\Comment(
                         $serviceManager->get('main')
