@@ -18,28 +18,35 @@ class Comment
 
     public function insert(
         int $userId,
-        string $name,
-        string $slug,
-        string $description
-    ) {
+        int $entity_id,
+        int $entity_type_id,
+        int $type_id,
+        string $message
+    ) : int {
         $sql = '
             INSERT
               INTO `comment` (
-                       `user_id`, `name`, `slug`, `description`, `created`
+                       `user_id`,
+                       `entity_id`,
+                       `entity_type_id`,
+                       `type_id`,
+                       `message`,
+                       `created`
                    )
-            VALUES (?, ?, ?, ?, UTC_TIMESTAMP())
+            VALUES (?, ?, ?, ?, ?, UTC_TIMESTAMP())
                  ;
         ';
         $parameters = [
             $userId,
-            $name,
-            $slug,
-            $description
+            $entity_id,
+            $entity_type_id,
+            $type_id,
+            $message,
         ];
-        return $this->adapter
-                    ->query($sql)
-                    ->execute($parameters)
-                    ->getGeneratedValue();
+        return (int) $this->adapter
+                          ->query($sql)
+                          ->execute($parameters)
+                          ->getGeneratedValue();
     }
 
     public function selectCount()

@@ -44,4 +44,24 @@ class CommentTest extends TableTestCase
             $this->commentTable
         );
     }
+
+    public function testInsertAndSelectCount()
+    {
+        $this->assertSame(
+            0,
+            $this->commentTable->selectCount()
+        );
+        $this->assertSame(
+            1,
+            $this->commentTable->insert(1, 2, 3, 4, 'message')
+        );
+        $this->assertSame(
+            2,
+            $this->commentTable->insert(1, 2, 3, 4, 'message')
+        );
+        $this->assertSame(
+            2,
+            $this->commentTable->selectCount()
+        );
+    }
 }
