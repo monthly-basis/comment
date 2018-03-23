@@ -30,6 +30,8 @@ class Comment
         $commentEntity = new CommentEntity\Comment();
         $commentEntity->setCommentId($array['comment_id'])
                       ->setCreated(new DateTime($array['created']))
+                      ->setMessage($array['message'])
+                      ->setUserId($array['user_id'])
                       ->setViews($array['views']);
 
         return $commentEntity;
@@ -46,20 +48,6 @@ class Comment
     ) : CommentEntity\Comment {
         return $this->buildFromArray(
             $this->commentTable->selectWhereCommentId($commentId)
-        );
-    }
-
-    /**
-     * Build from slug.
-     *
-     * @param string $slug
-     * @return CommentEntity\Comment
-     */
-    public function buildFromSlug(
-        string $slug
-    ) : CommentEntity\Comment {
-        return $this->buildFromArray(
-            $this->commentTable->selectWhereSlug($slug)
         );
     }
 }
