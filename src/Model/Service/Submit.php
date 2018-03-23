@@ -30,13 +30,16 @@ class Submit
     }
 
     /**
-     * Create.
+     * Submit.
      *
      * @param $userId
      * @return CommentEntity\Comment
      */
     public function create(
-        UserEntity\User $userEntity = null
+        UserEntity\User $userEntity = null,
+        int $entityId = null,
+        int $entityTypeId,
+        int $typeId
     ) : CommentEntity\Comment {
         $errors = [];
 
@@ -49,12 +52,12 @@ class Submit
             throw new Exception('Invalid form input.');
         }
 
-        $commentSlug = $this->urlFriendlyService->getUrlFriendly($_POST['name']);
         $commentId = $this->commentTable->insert(
             $userEntity->getUserId(),
-            $_POST['name'],
-            $commentSlug,
-            $_POST['description']
+            $entityId,
+            $entityTypeId,
+            $typeId,
+            $_POST['message']
         );
 
         return $this->commentFactory->buildFromCommentId($commentId);

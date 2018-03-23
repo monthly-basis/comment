@@ -18,9 +18,9 @@ class Comment
 
     public function insert(
         int $userId,
-        int $entity_id,
-        int $entity_type_id,
-        int $type_id,
+        int $entityId = null,
+        int $entityTypeId,
+        int $typeId,
         string $message
     ) : int {
         $sql = '
@@ -38,9 +38,9 @@ class Comment
         ';
         $parameters = [
             $userId,
-            $entity_id,
-            $entity_type_id,
-            $type_id,
+            $entityId,
+            $entityTypeId,
+            $typeId,
             $message,
         ];
         return (int) $this->adapter
