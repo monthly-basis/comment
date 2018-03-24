@@ -22,18 +22,25 @@ class CommentTest extends TestCase
 
     public function testGettersAndSetters()
     {
-        $userId = 123;
-        $this->commentEntity->setUserId($userId);
-        $this->assertSame(
-            $userId,
-            $this->commentEntity->getUserId()
-        );
-
         $created = new DateTime();
         $this->commentEntity->setCreated($created);
         $this->assertSame(
             $created,
             $this->commentEntity->getCreated()
+        );
+
+        $message = 'this is the message';
+        $this->commentEntity->setMessage($message);
+        $this->assertSame(
+            $message,
+            $this->commentEntity->getMessage()
+        );
+
+        $userId = 123;
+        $this->commentEntity->setUserId($userId);
+        $this->assertSame(
+            $userId,
+            $this->commentEntity->getUserId()
         );
     }
 }
