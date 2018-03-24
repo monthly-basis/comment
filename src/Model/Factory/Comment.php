@@ -31,8 +31,7 @@ class Comment
         $commentEntity->setCommentId($array['comment_id'])
                       ->setCreated(new DateTime($array['created']))
                       ->setMessage($array['message'])
-                      ->setUserId($array['user_id'])
-                      ->setViews($array['views']);
+                      ->setUserId($array['user_id']);
 
         return $commentEntity;
     }
