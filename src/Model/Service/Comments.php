@@ -5,6 +5,7 @@ use Generator;
 use LeoGalleguillos\Comment\Model\Entity as CommentEntity;
 use LeoGalleguillos\Comment\Model\Factory as CommentFactory;
 use LeoGalleguillos\Comment\Model\Table as CommentTable;
+use LeoGalleguillos\Entity\Model\Entity as EntityEntity;
 
 class Comments
 {
@@ -25,17 +26,17 @@ class Comments
     /**
      * Get.
      *
-     * @param int $entityTypeId
+     * @param EntityEntity\EntityType $entityTypeEntity
      * @param int $typeId
      * @yield CommentEntity\Comment
      * @return Generator
      */
     public function get(
-        int $entityTypeId,
+        EntityEntity\EntityType $entityTypeEntity,
         int $typeId
     ) : Generator {
         $arrays = $this->commentTable->selectWhereEntityTypeIdAndTypeId(
-            $entityTypeId,
+            $entityTypeEntity->getEntityTypeId(),
             $typeId
         );
         foreach ($arrays as $array) {
