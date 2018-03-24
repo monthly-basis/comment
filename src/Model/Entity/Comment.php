@@ -10,7 +10,6 @@ class Comment
     protected $created;
     protected $message;
     protected $userId;
-    protected $views;
 
     public function getCommentId() : int
     {
@@ -30,11 +29,6 @@ class Comment
     public function getUserId() : int
     {
         return $this->userId;
-    }
-
-    public function getViews() : int
-    {
-        return $this->views;
     }
 
     public function setCreated(DateTime $created) : CommentEntity\Comment
@@ -58,12 +52,6 @@ class Comment
     public function setUserId(int $userId) : CommentEntity\Comment
     {
         $this->userId = $userId;
-        return $this;
-    }
-
-    public function setViews(int $views) : CommentEntity\Comment
-    {
-        $this->views = $views;
         return $this;
     }
 }
