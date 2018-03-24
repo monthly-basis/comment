@@ -35,7 +35,7 @@ class Submit
      * @param int $entityTypeId
      * @param int $typeId
      */
-    public function create(
+    public function submit(
         UserEntity\User $userEntity = null,
         int $entityId = null,
         int $entityTypeId,
