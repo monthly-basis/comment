@@ -97,7 +97,7 @@ class Comment
             $entityTypeId,
             $typeId,
         ];
-        foreach ($this->adapter->query($sql)->execute([$parameters]) as $array) {
+        foreach ($this->adapter->query($sql)->execute($parameters) as $array) {
             yield $array;
         }
     }
