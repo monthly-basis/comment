@@ -22,7 +22,7 @@ class Comment
         return $this->created;
     }
 
-    public function getDescription() : string
+    public function getMessage() : string
     {
         return $this->message;
     }
@@ -43,7 +43,7 @@ class Comment
         return $this;
     }
 
-    public function setDescription(string $message) : CommentEntity\Comment
+    public function setMessage(string $message) : CommentEntity\Comment
     {
         $this->message = $message;
         return $this;
