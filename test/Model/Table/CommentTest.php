@@ -95,4 +95,39 @@ class CommentTest extends TableTestCase
             'the message'
         );
     }
+
+    public function testSelectWhereEntityTypeIdAndTypeId()
+    {
+        $generator = $this->commentTable->selectWhereEntityTypeIdAndTypeId(
+            1,
+            2
+        );
+        $this->assertInstanceOf(
+            Generator::class,
+            $generator
+        );
+        $this->assertNull($generator->current());
+
+        $this->commentTable->insert(1, 2, 3, 4, 'the message');
+        $this->commentTable->insert(1, 2, 3, 4, 'another message');
+        $generator = $this->commentTable->selectWhereEntityTypeIdAndTypeId(
+            3,
+            4
+        );
+        $this->assertInstanceOf(
+            Generator::class,
+            $generator
+        );
+        $array = $generator->current();
+        $this->assertSame(
+            'the message',
+            $array['message']
+        );
+        $generator->next();
+        $array = $generator->current();
+        $this->assertSame(
+            'another message',
+            $array['message']
+        );
+    }
 }
