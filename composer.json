@@ -2,6 +2,7 @@
     "name": "leo-galleguillos/comment",
     "license": "MIT",
     "require": {
+        "leo-galleguillos/entity": "dev-master",
         "leo-galleguillos/flash": "dev-master",
         "zendframework/zend-db": "^2.9",
         "zendframework/zend-test": "^3.1"
