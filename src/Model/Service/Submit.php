@@ -5,9 +5,7 @@ use Exception;
 use LeoGalleguillos\Flash\Model\Service as FlashService;
 use LeoGalleguillos\Comment\Model\Entity as CommentEntity;
 use LeoGalleguillos\Comment\Model\Factory as CommentFactory;
-use LeoGalleguillos\Comment\Model\Service as CommentService;
 use LeoGalleguillos\Comment\Model\Table as CommentTable;
-use LeoGalleguillos\String\Model\Service as StringService;
 use LeoGalleguillos\User\Model\Entity as UserEntity;
 
 class Submit
@@ -16,8 +14,8 @@ class Submit
      * Construct.
      *
      * @param FlashService\Flash $flashService,
-     * @param CommentFactory\Comment $commentFactory,
-     * @param CommentTable\Comment $commentTable,
+     * @param CommentFactory\Comment $commentFactory
+     * @param CommentTable\Comment $commentTable
      */
     public function __construct(
         FlashService\Flash $flashService,
@@ -32,8 +30,10 @@ class Submit
     /**
      * Submit.
      *
-     * @param $userId
-     * @return CommentEntity\Comment
+     * @param UserEntity\User|null $userEntity
+     * @param int|null $entityId
+     * @param int $entityTypeId
+     * @param int $typeId
      */
     public function create(
         UserEntity\User $userEntity = null,
