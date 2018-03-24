@@ -30,6 +30,12 @@ class Module
                         $serviceManager->get(CommentTable\Comment::class)
                     );
                 },
+                CommentService\Comments::class => function ($serviceManager) {
+                    return new CommentService\Comments(
+                        $serviceManager->get(CommentFactory\Comment::class),
+                        $serviceManager->get(CommentTable\Comment::class)
+                    );
+                },
                 CommentService\Submit::class => function ($serviceManager) {
                     return new CommentService\Submit(
                         $serviceManager->get(FlashService\Flash::class),

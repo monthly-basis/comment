@@ -76,4 +76,29 @@ class Comment
         ';
         return $this->adapter->query($sql)->execute([$commentId])->current();
     }
+
+    public function selectWhereEntityTypeIdAndTypeId(
+        int $entityTypeId,
+        int $typeId
+    ) : Generator {
+        $sql = '
+            SELECT `comment_id`
+                 , `user_id`
+                 , `entity_id`
+                 , `entity_type_id`
+                 , `type_id`
+                 , `message`
+                 , `created`
+              FROM `comment`
+             WHERE `entity_type_id` = ?
+               AND `type_id` = ?
+        ';
+        $parameters = [
+            $entityTypeId,
+            $typeId,
+        ];
+        foreach ($this->adapter->query($sql)->execute([$parameters]) as $array) {
+            yield $array;
+        }
+    }
 }
