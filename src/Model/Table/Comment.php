@@ -82,7 +82,7 @@ class Comment
         int $typeId
     ) : int {
         $sql = '
-            SELECT COUNT(*)
+            SELECT COUNT(*) AS `count`
               FROM `comment`
              WHERE `entity_type_id` = ?
                AND `type_id` = ?
