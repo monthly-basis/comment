@@ -3,13 +3,14 @@ namespace LeoGalleguillos\Comment\Model\Entity;
 
 use DateTime;
 use LeoGalleguillos\Comment\Model\Entity as CommentEntity;
+use LeoGalleguillos\User\Model\Entity as UserEntity;
 
 class Comment
 {
     protected $commentId;
     protected $created;
     protected $message;
-    protected $userId;
+    protected $userEntity;
 
     public function getCommentId() : int
     {
@@ -26,9 +27,9 @@ class Comment
         return $this->message;
     }
 
-    public function getUserId() : int
+    public function getUserEntity() : UserEntity\User
     {
-        return $this->userId;
+        return $this->userEntity;
     }
 
     public function setCreated(DateTime $created) : CommentEntity\Comment
@@ -49,9 +50,9 @@ class Comment
         return $this;
     }
 
-    public function setUserId(int $userId) : CommentEntity\Comment
+    public function setUserEntity(UserEntity\User $userEntity) : CommentEntity\Comment
     {
-        $this->userId = $userId;
+        $this->userEntity = $userEntity;
         return $this;
     }
 }

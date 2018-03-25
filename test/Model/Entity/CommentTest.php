@@ -3,6 +3,7 @@ namespace LeoGalleguillos\CommentTest\Model\Entity;
 
 use DateTime;
 use LeoGalleguillos\Comment\Model\Entity as CommentEntity;
+use LeoGalleguillos\User\Model\Entity as UserEntity;
 use PHPUnit\Framework\TestCase;
 
 class CommentTest extends TestCase
@@ -36,11 +37,11 @@ class CommentTest extends TestCase
             $this->commentEntity->getMessage()
         );
 
-        $userId = 123;
-        $this->commentEntity->setUserId($userId);
+        $userEntity = new UserEntity\User();
+        $this->commentEntity->setUserEntity($userEntity);
         $this->assertSame(
-            $userId,
-            $this->commentEntity->getUserId()
+            $userEntity,
+            $this->commentEntity->getUserEntity()
         );
     }
 }
