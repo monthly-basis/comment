@@ -30,7 +30,7 @@ class Count
     public function count(
         EntityEntity\EntityType $entityTypeEntity,
         int $typeId
-    ) : Generator {
+    ) : int {
         return $this->commentTable->selectCountWhereEntityTypeIdAndTypeId(
             $entityTypeEntity->getEntityTypeId(),
             $typeId
