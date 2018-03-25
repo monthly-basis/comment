@@ -4,6 +4,7 @@ namespace LeoGalleguillos\Comment\Model\Factory;
 use DateTime;
 use LeoGalleguillos\Comment\Model\Entity as CommentEntity;
 use LeoGalleguillos\Comment\Model\Table as CommentTable;
+use LeoGalleguillos\User\Model\Factory as UserFactory;
 
 class Comment
 {
@@ -11,11 +12,14 @@ class Comment
      * Construct
      *
      * @param CommentTable\Comment $commentTable
+     * @param UserFactory\User $userFactory
      */
     public function __construct(
-        CommentTable\Comment $commentTable
+        CommentTable\Comment $commentTable,
+        UserFactory\User $userFactory
     ) {
         $this->commentTable = $commentTable;
+        $this->userFactory  = $userFactory;
     }
 
     /**
@@ -30,8 +34,13 @@ class Comment
         $commentEntity = new CommentEntity\Comment();
         $commentEntity->setCommentId($array['comment_id'])
                       ->setCreated(new DateTime($array['created']))
-                      ->setMessage($array['message'])
-                      ->setUserId($array['user_id']);
+                      ->setMessage($array['message']);
+
+        if (!empty($array['user_id'])) {
+            $commentEntity->setUserEntity(
+                $this->userFactory->buildFromUserId($array['user_id'])
+            );
+        }
 
         return $commentEntity;
     }

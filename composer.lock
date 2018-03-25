@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d9df2a5ca165e051726f31ed33268e58",
-    "content-hash": "938df2d5004e0b91c3c87de099be98ff",
+    "hash": "f53f5d8856e80f35df9abc945dbbde93",
+    "content-hash": "c9fafcdb02ae9e9bbd16832d9b3f21bd",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -152,6 +152,100 @@
                 "MIT"
             ],
             "time": "2018-02-05 17:33:48"
+        },
+        {
+            "name": "leo-galleguillos/image",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LeoGalleguillos/Image.git",
+                "reference": "4be51aff572f4cd63679853a3030c6d03c321dd7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Image/zipball/4be51aff572f4cd63679853a3030c6d03c321dd7",
+                "reference": "4be51aff572f4cd63679853a3030c6d03c321dd7",
+                "shasum": ""
+            },
+            "require": {
+                "zendframework/zend-test": "^3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LeoGalleguillos\\Image\\": "src/",
+                    "LeoGalleguillos\\ImageTest\\": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2018-03-06 14:49:28"
+        },
+        {
+            "name": "leo-galleguillos/string",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LeoGalleguillos/String.git",
+                "reference": "df016a6893b9bd33fdfd53805315c7f26c5b4518"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LeoGalleguillos/String/zipball/df016a6893b9bd33fdfd53805315c7f26c5b4518",
+                "reference": "df016a6893b9bd33fdfd53805315c7f26c5b4518",
+                "shasum": ""
+            },
+            "require": {
+                "zendframework/zend-test": "^3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LeoGalleguillos\\String\\": "src/",
+                    "LeoGalleguillos\\StringTest\\": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2018-03-07 19:58:11"
+        },
+        {
+            "name": "leo-galleguillos/user",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LeoGalleguillos/User.git",
+                "reference": "de460e8ab6da31d9b75510bf316b5fe03f70413d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LeoGalleguillos/User/zipball/de460e8ab6da31d9b75510bf316b5fe03f70413d",
+                "reference": "de460e8ab6da31d9b75510bf316b5fe03f70413d",
+                "shasum": ""
+            },
+            "require": {
+                "leo-galleguillos/flash": "dev-master",
+                "leo-galleguillos/image": "dev-master",
+                "leo-galleguillos/string": "dev-master",
+                "zendframework/zend-db": "^2.9",
+                "zendframework/zend-test": "^3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LeoGalleguillos\\User\\": "src/",
+                    "LeoGalleguillos\\UserTest\\": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2018-03-19 06:42:40"
         },
         {
             "name": "myclabs/deep-copy",
@@ -2603,7 +2697,10 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "leo-galleguillos/entity": 20,
-        "leo-galleguillos/flash": 20
+        "leo-galleguillos/flash": 20,
+        "leo-galleguillos/image": 20,
+        "leo-galleguillos/string": 20,
+        "leo-galleguillos/user": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
