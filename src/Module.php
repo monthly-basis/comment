@@ -36,6 +36,11 @@ class Module
                         $serviceManager->get(CommentTable\Comment::class)
                     );
                 },
+                CommentService\Comments\Count::class => function ($serviceManager) {
+                    return new CommentService\Comments\Count(
+                        $serviceManager->get(CommentTable\Comment::class)
+                    );
+                },
                 CommentService\Submit::class => function ($serviceManager) {
                     return new CommentService\Submit(
                         $serviceManager->get(FlashService\Flash::class),

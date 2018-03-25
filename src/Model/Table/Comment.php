@@ -77,6 +77,26 @@ class Comment
         return $this->adapter->query($sql)->execute([$commentId])->current();
     }
 
+    public function selectCountWhereEntityTypeIdAndTypeId(
+        int $entityTypeId,
+        int $typeId
+    ) : int {
+        $sql = '
+            SELECT COUNT(*)
+              FROM `comment`
+             WHERE `entity_type_id` = ?
+               AND `type_id` = ?
+        ';
+        $parameters = [
+            $entityTypeId,
+            $typeId,
+        ];
+        return (int) $this->adapter
+                          ->query($sql)
+                          ->execute($parameters)
+                          ->current()['count'];
+    }
+
     public function selectWhereEntityTypeIdAndTypeId(
         int $entityTypeId,
         int $typeId
