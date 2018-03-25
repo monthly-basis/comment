@@ -65,6 +65,20 @@ class CommentTest extends TableTestCase
         );
     }
 
+    public function testSelectCountWhereEntityTypeIdAndTypeId()
+    {
+        $this->assertSame(
+            0,
+            $this->commentTable->selectCountWhereEntityTypeIdAndTypeId(3, 4)
+        );
+        $this->commentTable->insert(1, 2, 3, 4, 'the message');
+        $this->commentTable->insert(1, 2, 3, 4, 'the message');
+        $this->assertSame(
+            2,
+            $this->commentTable->selectCountWhereEntityTypeIdAndTypeId(3, 4)
+        );
+    }
+
     public function testSelectWhereCommentId()
     {
         $this->commentTable->insert(1, 2, 3, 4, 'the message');
