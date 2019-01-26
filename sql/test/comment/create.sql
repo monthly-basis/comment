@@ -8,4 +8,4 @@ CREATE TABLE `comment` (
     `message` text not null,
     `created` datetime not null,
     PRIMARY KEY (`comment_id`)
-) charset=utf8;
+) CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
