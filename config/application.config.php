@@ -4,6 +4,7 @@ return [
     'modules' => [
         'LeoGalleguillos\Comment',
         'LeoGalleguillos\Flash',
+        'LeoGalleguillos\ReCaptcha',
         'LeoGalleguillos\User',
         'Zend\Db',
         'Zend\Router',

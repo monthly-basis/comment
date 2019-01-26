@@ -6,6 +6,7 @@ use LeoGalleguillos\Comment\Model\Service as CommentService;
 use LeoGalleguillos\Comment\Model\Table as CommentTable;
 use LeoGalleguillos\Comment\View\Helper as CommentHelper;
 use LeoGalleguillos\Flash\Model\Service as FlashService;
+use LeoGalleguillos\ReCaptcha\Model\Service as ReCaptchaService;
 use LeoGalleguillos\User\Model\Factory as UserFactory;
 
 class Module
@@ -48,6 +49,14 @@ class Module
                         $serviceManager->get(FlashService\Flash::class),
                         $serviceManager->get(CommentFactory\Comment::class),
                         $serviceManager->get(CommentTable\Comment::class)
+                    );
+                },
+                CommentService\SubmitWithReCaptcha::class => function ($serviceManager) {
+                    return new CommentService\SubmitWithReCaptcha(
+                        $serviceManager->get(FlashService\Flash::class),
+                        $serviceManager->get(CommentFactory\Comment::class),
+                        $serviceManager->get(CommentTable\Comment::class),
+                        $serviceManager->get(ReCaptchaService\Valid::class)
                     );
                 },
                 CommentTable\Comment::class => function ($serviceManager) {
