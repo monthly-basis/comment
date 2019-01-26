@@ -17,30 +17,33 @@ class Comment
     }
 
     public function insert(
-        int $userId,
         int $entityId = null,
         int $entityTypeId,
         int $typeId,
+        int $userId = null,
+        string $name = null,
         string $message
     ) : int {
         $sql = '
             INSERT
               INTO `comment` (
-                       `user_id`,
                        `entity_id`,
                        `entity_type_id`,
                        `type_id`,
+                       `user_id`,
+                       `name`,
                        `message`,
                        `created`
                    )
-            VALUES (?, ?, ?, ?, ?, UTC_TIMESTAMP())
+            VALUES (?, ?, ?, ?, ?, ?, UTC_TIMESTAMP())
                  ;
         ';
         $parameters = [
-            $userId,
             $entityId,
             $entityTypeId,
             $typeId,
+            $userId,
+            $name,
             $message,
         ];
         return (int) $this->adapter
@@ -64,10 +67,11 @@ class Comment
     {
         $sql = '
             SELECT `comment_id`
-                 , `user_id`
                  , `entity_id`
                  , `entity_type_id`
                  , `type_id`
+                 , `user_id`
+                 , `name`
                  , `message`
                  , `created`
               FROM `comment`
@@ -103,10 +107,11 @@ class Comment
     ) : Generator {
         $sql = '
             SELECT `comment_id`
-                 , `user_id`
                  , `entity_id`
                  , `entity_type_id`
                  , `type_id`
+                 , `user_id`
+                 , `name`
                  , `message`
                  , `created`
               FROM `comment`

@@ -53,11 +53,11 @@ class CommentTest extends TableTestCase
         );
         $this->assertSame(
             1,
-            $this->commentTable->insert(1, 2, 3, 4, 'message')
+            $this->commentTable->insert(1, 2, 3, 4, null, 'message')
         );
         $this->assertSame(
             2,
-            $this->commentTable->insert(1, 2, 3, 4, 'message')
+            $this->commentTable->insert(1, 2, 3, null, 'name', 'message')
         );
         $this->assertSame(
             2,
@@ -71,17 +71,17 @@ class CommentTest extends TableTestCase
             0,
             $this->commentTable->selectCountWhereEntityTypeIdAndTypeId(3, 4)
         );
-        $this->commentTable->insert(1, 2, 3, 4, 'the message');
-        $this->commentTable->insert(1, 2, 3, 4, 'the message');
+        $this->commentTable->insert(1, 2, 3, 4, null, 'the message');
+        $this->commentTable->insert(1, 2, 3, null, 'name', 'the message');
         $this->assertSame(
             2,
-            $this->commentTable->selectCountWhereEntityTypeIdAndTypeId(3, 4)
+            $this->commentTable->selectCountWhereEntityTypeIdAndTypeId(2, 3)
         );
     }
 
     public function testSelectWhereCommentId()
     {
-        $this->commentTable->insert(1, 2, 3, 4, 'the message');
+        $this->commentTable->insert(1, 2, 3, 4, null, 'the message');
         $array = $this->commentTable->selectWhereCommentId(1);
 
         $this->assertSame(
@@ -89,19 +89,19 @@ class CommentTest extends TableTestCase
             '1'
         );
         $this->assertSame(
-            $array['user_id'],
+            $array['entity_id'],
             '1'
         );
         $this->assertSame(
-            $array['entity_id'],
+            $array['entity_type_id'],
             '2'
         );
         $this->assertSame(
-            $array['entity_type_id'],
+            $array['type_id'],
             '3'
         );
         $this->assertSame(
-            $array['type_id'],
+            $array['user_id'],
             '4'
         );
         $this->assertSame(
@@ -122,11 +122,11 @@ class CommentTest extends TableTestCase
         );
         $this->assertNull($generator->current());
 
-        $this->commentTable->insert(1, 2, 3, 4, 'the message');
-        $this->commentTable->insert(1, 2, 3, 4, 'another message');
+        $this->commentTable->insert(1, 2, 3, 4, null, 'the message');
+        $this->commentTable->insert(1, 2, 3, null, 'name', 'another message');
         $generator = $this->commentTable->selectWhereEntityTypeIdAndTypeId(
-            3,
-            4
+            2,
+            3
         );
         $this->assertInstanceOf(
             Generator::class,
