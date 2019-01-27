@@ -61,7 +61,7 @@ class Module
                 },
                 CommentTable\Comment::class => function ($serviceManager) {
                     return new CommentTable\Comment(
-                        $serviceManager->get('main')
+                        $serviceManager->get('comment')
                     );
                 },
             ],
