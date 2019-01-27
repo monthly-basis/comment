@@ -25,9 +25,7 @@ class SubmitWithReCaptcha
     public function submitWithReCaptcha(
         int $entityId = null,
         int $entityTypeId,
-        int $typeId,
-        string $name,
-        string $message
+        int $typeId
     ): CommentEntity\Comment {
         $errors = [];
 
@@ -37,11 +35,11 @@ class SubmitWithReCaptcha
             throw new Exception('Invalid form input.');
         }
 
-        if (empty($name)) {
+        if (empty($_POST['name'])) {
             $errors[] = 'Invalid name.';
         }
 
-        if (empty($message)) {
+        if (empty($_POST['message'])) {
             $errors[] = 'Invalid message.';
         }
 
@@ -55,8 +53,8 @@ class SubmitWithReCaptcha
             $entityTypeId,
             $typeId,
             null,
-            $name,
-            $message
+            $_POST['name'],
+            $_POST['message']
         );
 
         return $this->commentFactory->buildFromCommentId($commentId);
