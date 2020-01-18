@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fb1aaa78ef8beb60b5f5e2c319289c18",
+    "content-hash": "c61a027e191449de73eff2602db88e46",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -215,16 +215,16 @@
         },
         {
             "name": "laminas/laminas-db",
-            "version": "2.11.1",
+            "version": "2.11.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-db.git",
-                "reference": "8ed705724d1b03d9a7ab59dc110a43ed1781c7e4"
+                "reference": "76f9527da996c2fef32ef1f3a939e18ca5e9d962"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-db/zipball/8ed705724d1b03d9a7ab59dc110a43ed1781c7e4",
-                "reference": "8ed705724d1b03d9a7ab59dc110a43ed1781c7e4",
+                "url": "https://api.github.com/repos/laminas/laminas-db/zipball/76f9527da996c2fef32ef1f3a939e18ca5e9d962",
+                "reference": "76f9527da996c2fef32ef1f3a939e18ca5e9d962",
                 "shasum": ""
             },
             "require": {
@@ -273,7 +273,7 @@
                 "db",
                 "laminas"
             ],
-            "time": "2020-01-10T22:07:11+00:00"
+            "time": "2020-01-14T13:07:26+00:00"
         },
         {
             "name": "laminas/laminas-dom",
@@ -1270,18 +1270,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/Entity.git",
-                "reference": "6ff63939fd7f00f87c93c398ea97e1aa52fc94b5"
+                "reference": "b8b458fc8cc6747f7774f06be3d10977f04dcfe4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/Entity/zipball/6ff63939fd7f00f87c93c398ea97e1aa52fc94b5",
-                "reference": "6ff63939fd7f00f87c93c398ea97e1aa52fc94b5",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Entity/zipball/b8b458fc8cc6747f7774f06be3d10977f04dcfe4",
+                "reference": "b8b458fc8cc6747f7774f06be3d10977f04dcfe4",
                 "shasum": ""
             },
             "require": {
-                "leo-galleguillos/test": "dev-master",
-                "zendframework/zend-db": "^2.9",
-                "zendframework/zend-test": "^3.1"
+                "laminas/laminas-db": "^2.9",
+                "laminas/laminas-test": "^3.1",
+                "leo-galleguillos/test": "dev-master"
             },
             "type": "library",
             "autoload": {
@@ -1294,7 +1294,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2020-01-12T08:34:38+00:00"
+            "time": "2020-01-13T20:11:04+00:00"
         },
         {
             "name": "leo-galleguillos/flash",
@@ -1359,21 +1359,21 @@
         },
         {
             "name": "leo-galleguillos/re-captcha",
-            "version": "dev-master",
+            "version": "v2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/ReCaptcha.git",
-                "reference": "d16c5b4ca0ca3697c28293f717a5afa1e3fc9121"
+                "reference": "9bf9dfed9f6b3c1b936612b6dd0294003407207a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/ReCaptcha/zipball/d16c5b4ca0ca3697c28293f717a5afa1e3fc9121",
-                "reference": "d16c5b4ca0ca3697c28293f717a5afa1e3fc9121",
+                "url": "https://api.github.com/repos/LeoGalleguillos/ReCaptcha/zipball/9bf9dfed9f6b3c1b936612b6dd0294003407207a",
+                "reference": "9bf9dfed9f6b3c1b936612b6dd0294003407207a",
                 "shasum": ""
             },
             "require": {
-                "leo-galleguillos/string": "dev-master",
-                "zendframework/zend-test": "^3.1"
+                "laminas/laminas-test": "^3.1",
+                "leo-galleguillos/string": "dev-master"
             },
             "type": "library",
             "autoload": {
@@ -1386,7 +1386,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2019-01-26T18:46:02+00:00"
+            "time": "2020-01-18T08:02:37+00:00"
         },
         {
             "name": "leo-galleguillos/string",
@@ -1451,25 +1451,25 @@
         },
         {
             "name": "leo-galleguillos/user",
-            "version": "dev-master",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/User.git",
-                "reference": "019ffee7dae801b40fccd032a4beb83af61691eb"
+                "reference": "c10f87ad8b56396a570b95ed9eb8e5da7dbf3ee8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/User/zipball/019ffee7dae801b40fccd032a4beb83af61691eb",
-                "reference": "019ffee7dae801b40fccd032a4beb83af61691eb",
+                "url": "https://api.github.com/repos/LeoGalleguillos/User/zipball/c10f87ad8b56396a570b95ed9eb8e5da7dbf3ee8",
+                "reference": "c10f87ad8b56396a570b95ed9eb8e5da7dbf3ee8",
                 "shasum": ""
             },
             "require": {
+                "laminas/laminas-db": "^2.9",
+                "laminas/laminas-test": "^3.1",
                 "leo-galleguillos/flash": "dev-master",
-                "leo-galleguillos/re-captcha": "dev-master",
+                "leo-galleguillos/re-captcha": "~2.0.0",
                 "leo-galleguillos/string": "dev-master",
-                "leo-galleguillos/test": "dev-master",
-                "zendframework/zend-db": "^2.9",
-                "zendframework/zend-test": "^3.1"
+                "leo-galleguillos/test": "dev-master"
             },
             "type": "library",
             "autoload": {
@@ -1482,7 +1482,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2019-08-23T20:24:08+00:00"
+            "time": "2020-01-18T22:20:28+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -3000,10 +3000,8 @@
         "leo-galleguillos/entity": 20,
         "leo-galleguillos/flash": 20,
         "leo-galleguillos/image": 20,
-        "leo-galleguillos/re-captcha": 20,
         "leo-galleguillos/string": 20,
-        "leo-galleguillos/test": 20,
-        "leo-galleguillos/user": 20
+        "leo-galleguillos/test": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
