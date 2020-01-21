@@ -7,10 +7,10 @@
         "leo-galleguillos/entity": "dev-master",
         "leo-galleguillos/flash": "dev-master",
         "leo-galleguillos/image": "dev-master",
-        "leo-galleguillos/re-captcha": "~2.0.0",
+        "leo-galleguillos/re-captcha": "^2.0",
         "leo-galleguillos/string": "dev-master",
         "leo-galleguillos/test": "dev-master",
-        "leo-galleguillos/user": "~1.0.0"
+        "leo-galleguillos/user": "^1.0"
     },
     "autoload": {
         "psr-4": {
