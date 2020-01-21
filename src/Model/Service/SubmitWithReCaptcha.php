@@ -29,12 +29,6 @@ class SubmitWithReCaptcha
     ): CommentEntity\Comment {
         $errors = [];
 
-        if (!$this->validService->isValid()) {
-            $errors[] = 'Invalid reCAPTCHA.';
-            $this->flashService->set('errors', $errors);
-            throw new Exception('Invalid form input.');
-        }
-
         if (empty($_POST['name'])) {
             $errors[] = 'Invalid name.';
         }
@@ -44,6 +38,12 @@ class SubmitWithReCaptcha
         }
 
         if ($errors) {
+            $this->flashService->set('errors', $errors);
+            throw new Exception('Invalid form input.');
+        }
+
+        if (!$this->validService->isValid()) {
+            $errors[] = 'Invalid reCAPTCHA.';
             $this->flashService->set('errors', $errors);
             throw new Exception('Invalid form input.');
         }
