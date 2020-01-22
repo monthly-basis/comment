@@ -8,12 +8,6 @@ use LeoGalleguillos\User\Model\Factory as UserFactory;
 
 class Comment
 {
-    /**
-     * Construct
-     *
-     * @param CommentTable\Comment $commentTable
-     * @param UserFactory\User $userFactory
-     */
     public function __construct(
         CommentTable\Comment $commentTable,
         UserFactory\User $userFactory
@@ -22,21 +16,16 @@ class Comment
         $this->userFactory  = $userFactory;
     }
 
-    /**
-     * Build from array.
-     *
-     * @param array $array
-     * @return CommentEntity\Comment
-     */
     public function buildFromArray(
         array $array
-    ) : CommentEntity\Comment {
+    ): CommentEntity\Comment {
         $commentEntity = new CommentEntity\Comment();
-        $commentEntity->setCommentId($array['comment_id'])
-                      ->setCreated(new DateTime($array['created']))
-                      ->setMessage($array['message']);
+        $commentEntity
+            ->setCommentId($array['comment_id'])
+            ->setCreated(new DateTime($array['created']))
+            ->setMessage($array['message']);
 
-        if (!empty($array['user_id'])) {
+        if (isset($array['user_id'])) {
             $commentEntity->setUserEntity(
                 $this->userFactory->buildFromUserId($array['user_id'])
             );
@@ -45,15 +34,9 @@ class Comment
         return $commentEntity;
     }
 
-    /**
-     * Build from comment ID.
-     *
-     * @param int $commentId
-     * @return CommentEntity\Comment
-     */
     public function buildFromCommentId(
         int $commentId
-    ) : CommentEntity\Comment {
+    ): CommentEntity\Comment {
         return $this->buildFromArray(
             $this->commentTable->selectWhereCommentId($commentId)
         );
