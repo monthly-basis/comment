@@ -25,6 +25,9 @@ class Comment
             ->setCreated(new DateTime($array['created']))
             ->setMessage($array['message']);
 
+        if (isset($array['name'])) {
+            $commentEntity->setName($array['name']);
+        }
         if (isset($array['user_id'])) {
             $commentEntity->setUserEntity(
                 $this->userFactory->buildFromUserId($array['user_id'])
