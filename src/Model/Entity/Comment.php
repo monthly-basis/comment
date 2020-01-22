@@ -10,6 +10,7 @@ class Comment
     protected $commentId;
     protected $created;
     protected $message;
+    protected $name;
     protected $userEntity;
 
     public function getCommentId(): int
@@ -27,6 +28,11 @@ class Comment
         return $this->message;
     }
 
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
     public function getUserEntity(): UserEntity\User
     {
         return $this->userEntity;
@@ -41,6 +47,12 @@ class Comment
     public function setMessage(string $message): CommentEntity\Comment
     {
         $this->message = $message;
+        return $this;
+    }
+
+    public function setName(string $name): CommentEntity\Comment
+    {
+        $this->name = $name;
         return $this;
     }
 

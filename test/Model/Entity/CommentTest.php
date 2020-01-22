@@ -13,14 +13,6 @@ class CommentTest extends TestCase
         $this->commentEntity = new CommentEntity\Comment();
     }
 
-    public function testInitialize()
-    {
-        $this->assertInstanceOf(
-            CommentEntity\Comment::class,
-            $this->commentEntity
-        );
-    }
-
     public function testGettersAndSetters()
     {
         $created = new DateTime();
@@ -35,6 +27,16 @@ class CommentTest extends TestCase
         $this->assertSame(
             $message,
             $this->commentEntity->getMessage()
+        );
+
+        $name = 'My Name';
+        $this->assertSame(
+            $this->commentEntity,
+            $this->commentEntity->setName($name)
+        );
+        $this->assertSame(
+            $name,
+            $this->commentEntity->getName()
         );
 
         $userEntity = new UserEntity\User();
