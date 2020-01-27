@@ -4,12 +4,12 @@
     "require": {
         "laminas/laminas-db": "^2.9",
         "laminas/laminas-test": "^3.1",
-        "leo-galleguillos/entity": "dev-master",
-        "leo-galleguillos/flash": "dev-master",
-        "leo-galleguillos/image": "dev-master",
+        "leo-galleguillos/entity": "^1.0",
+        "leo-galleguillos/flash": "^1.0",
+        "leo-galleguillos/image": "^1.0",
         "leo-galleguillos/re-captcha": "^2.0",
-        "leo-galleguillos/string": "dev-master",
-        "leo-galleguillos/test": "dev-master",
+        "leo-galleguillos/string": "^1.0",
+        "leo-galleguillos/test": "^1.0",
         "leo-galleguillos/user": "^1.0"
     },
     "autoload": {
