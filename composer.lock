@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e895284762d2170eb78a21793255fa89",
+    "content-hash": "bba243b8fdef317cfb13dce249650f38",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -1274,37 +1274,6 @@
             ],
             "abandoned": "monthly-basis/entity",
             "time": "2020-01-26T08:08:07+00:00"
-        },
-        {
-            "name": "leo-galleguillos/flash",
-            "version": "v1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/LeoGalleguillos/Flash.git",
-                "reference": "3e42ea1770828477ae71cd7c9fd326db98c8f7b1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/Flash/zipball/3e42ea1770828477ae71cd7c9fd326db98c8f7b1",
-                "reference": "3e42ea1770828477ae71cd7c9fd326db98c8f7b1",
-                "shasum": ""
-            },
-            "require": {
-                "laminas/laminas-test": "^3.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "LeoGalleguillos\\Flash\\": "src/",
-                    "LeoGalleguillos\\FlashTest\\": "test/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "abandoned": "monthly-basis/flash",
-            "time": "2020-01-25T09:12:09+00:00"
         },
         {
             "name": "leo-galleguillos/test",

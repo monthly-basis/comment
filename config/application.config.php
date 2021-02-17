@@ -3,7 +3,7 @@
 return [
     'modules' => [
         'LeoGalleguillos\Comment',
-        'LeoGalleguillos\Flash',
+        'MonthlyBasis\Flash',
         'MonthlyBasis\ReCaptcha',
         'MonthlyBasis\User',
         'Zend\Db',

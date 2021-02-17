@@ -5,7 +5,7 @@
         "laminas/laminas-db": "^2.9",
         "laminas/laminas-test": "^3.1",
         "leo-galleguillos/entity": "^1.0",
-        "leo-galleguillos/flash": "^1.0",
+        "monthly-basis/flash": "^2.0",
         "monthly-basis/laminas-test": "^2.0",
         "monthly-basis/re-captcha": "^3.0",
         "monthly-basis/user": "^2.0"

@@ -2,7 +2,7 @@
 namespace LeoGalleguillos\Comment\Model\Service;
 
 use Exception;
-use LeoGalleguillos\Flash\Model\Service as FlashService;
+use MonthlyBasis\Flash\Model\Service as FlashService;
 use LeoGalleguillos\Comment\Model\Entity as CommentEntity;
 use LeoGalleguillos\Comment\Model\Factory as CommentFactory;
 use LeoGalleguillos\Comment\Model\Table as CommentTable;
