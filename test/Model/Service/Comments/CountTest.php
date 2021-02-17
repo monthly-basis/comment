@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class CountTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->commentTableMock = $this->createMock(
             CommentTable\Comment::class

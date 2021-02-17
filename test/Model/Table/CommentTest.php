@@ -8,7 +8,7 @@ use LeoGalleguillos\Test\TableTestCase;
 class CommentTest extends TableTestCase
 {
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->commentTable = new CommentTable\Comment(
             $this->getAdapter()

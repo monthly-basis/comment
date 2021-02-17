@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class CommentTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->commentEntity = new CommentEntity\Comment();
     }
