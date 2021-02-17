@@ -6,7 +6,7 @@ use LeoGalleguillos\Flash\Model\Service as FlashService;
 use LeoGalleguillos\Comment\Model\Entity as CommentEntity;
 use LeoGalleguillos\Comment\Model\Factory as CommentFactory;
 use LeoGalleguillos\Comment\Model\Table as CommentTable;
-use LeoGalleguillos\ReCaptcha\Model\Service as ReCaptchaService;
+use MonthlyBasis\ReCaptcha\Model\Service as ReCaptchaService;
 
 class SubmitWithReCaptcha
 {

@@ -6,7 +6,7 @@ use LeoGalleguillos\Comment\Model\Service as CommentService;
 use LeoGalleguillos\Comment\Model\Table as CommentTable;
 use LeoGalleguillos\Comment\View\Helper as CommentHelper;
 use LeoGalleguillos\Flash\Model\Service as FlashService;
-use LeoGalleguillos\ReCaptcha\Model\Service as ReCaptchaService;
+use MonthlyBasis\ReCaptcha\Model\Service as ReCaptchaService;
 use MonthlyBasis\User\Model\Factory as UserFactory;
 
 class Module
