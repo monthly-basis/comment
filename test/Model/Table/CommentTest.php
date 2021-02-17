@@ -3,7 +3,7 @@ namespace LeoGalleguillos\CommentTest\Model\Table;
 
 use Generator;
 use LeoGalleguillos\Comment\Model\Table as CommentTable;
-use LeoGalleguillos\Test\TableTestCase;
+use MonthlyBasis\LaminasTest\TableTestCase;
 
 class CommentTest extends TableTestCase
 {

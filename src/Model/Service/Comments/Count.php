@@ -5,7 +5,7 @@ use Generator;
 use LeoGalleguillos\Comment\Model\Entity as CommentEntity;
 use LeoGalleguillos\Comment\Model\Factory as CommentFactory;
 use LeoGalleguillos\Comment\Model\Table as CommentTable;
-use LeoGalleguillos\Entity\Model\Entity as EntityEntity;
+use MonthlyBasis\Entity\Model\Entity as EntityEntity;
 
 class Count
 {
