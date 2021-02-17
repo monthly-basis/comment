@@ -8,7 +8,7 @@
         "leo-galleguillos/flash": "^1.0",
         "leo-galleguillos/re-captcha": "^2.0",
         "leo-galleguillos/test": "^1.0",
-        "leo-galleguillos/user": "^1.0"
+        "monthly-basis/user": "^2.0"
     },
     "autoload": {
         "psr-4": {

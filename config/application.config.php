@@ -5,7 +5,7 @@ return [
         'LeoGalleguillos\Comment',
         'LeoGalleguillos\Flash',
         'LeoGalleguillos\ReCaptcha',
-        'LeoGalleguillos\User',
+        'MonthlyBasis\User',
         'Zend\Db',
         'Zend\Router',
     ],

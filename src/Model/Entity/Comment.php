@@ -3,7 +3,7 @@ namespace LeoGalleguillos\Comment\Model\Entity;
 
 use DateTime;
 use LeoGalleguillos\Comment\Model\Entity as CommentEntity;
-use LeoGalleguillos\User\Model\Entity as UserEntity;
+use MonthlyBasis\User\Model\Entity as UserEntity;
 
 class Comment
 {

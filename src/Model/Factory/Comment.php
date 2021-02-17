@@ -4,7 +4,7 @@ namespace LeoGalleguillos\Comment\Model\Factory;
 use DateTime;
 use LeoGalleguillos\Comment\Model\Entity as CommentEntity;
 use LeoGalleguillos\Comment\Model\Table as CommentTable;
-use LeoGalleguillos\User\Model\Factory as UserFactory;
+use MonthlyBasis\User\Model\Factory as UserFactory;
 
 class Comment
 {
