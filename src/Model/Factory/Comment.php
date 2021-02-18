@@ -1,9 +1,9 @@
 <?php
-namespace LeoGalleguillos\Comment\Model\Factory;
+namespace MonthlyBasis\Comment\Model\Factory;
 
 use DateTime;
-use LeoGalleguillos\Comment\Model\Entity as CommentEntity;
-use LeoGalleguillos\Comment\Model\Table as CommentTable;
+use MonthlyBasis\Comment\Model\Entity as CommentEntity;
+use MonthlyBasis\Comment\Model\Table as CommentTable;
 use MonthlyBasis\User\Model\Factory as UserFactory;
 
 class Comment

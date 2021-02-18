@@ -1,8 +1,8 @@
 <?php
-namespace LeoGalleguillos\CommentTest\Model\Entity;
+namespace MonthlyBasis\CommentTest\Model\Entity;
 
-use LeoGalleguillos\Comment\Model\Service as CommentService;
-use LeoGalleguillos\Comment\Model\Table as CommentTable;
+use MonthlyBasis\Comment\Model\Service as CommentService;
+use MonthlyBasis\Comment\Model\Table as CommentTable;
 use PHPUnit\Framework\TestCase;
 
 class CountTest extends TestCase

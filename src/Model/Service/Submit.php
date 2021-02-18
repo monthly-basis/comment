@@ -1,11 +1,11 @@
 <?php
-namespace LeoGalleguillos\Comment\Model\Service;
+namespace MonthlyBasis\Comment\Model\Service;
 
 use Exception;
 use MonthlyBasis\Flash\Model\Service as FlashService;
-use LeoGalleguillos\Comment\Model\Entity as CommentEntity;
-use LeoGalleguillos\Comment\Model\Factory as CommentFactory;
-use LeoGalleguillos\Comment\Model\Table as CommentTable;
+use MonthlyBasis\Comment\Model\Entity as CommentEntity;
+use MonthlyBasis\Comment\Model\Factory as CommentFactory;
+use MonthlyBasis\Comment\Model\Table as CommentTable;
 use MonthlyBasis\User\Model\Entity as UserEntity;
 
 class Submit

@@ -4,7 +4,7 @@ return [
     'modules' => [
         'Laminas\Db',
         'Laminas\Router',
-        'LeoGalleguillos\Comment',
+        'MonthlyBasis\Comment',
         'MonthlyBasis\Flash',
         'MonthlyBasis\ReCaptcha',
         'MonthlyBasis\User',

@@ -1,8 +1,8 @@
 <?php
-namespace LeoGalleguillos\CommentTest\Model\Table;
+namespace MonthlyBasis\CommentTest\Model\Table;
 
 use Generator;
-use LeoGalleguillos\Comment\Model\Table as CommentTable;
+use MonthlyBasis\Comment\Model\Table as CommentTable;
 use MonthlyBasis\LaminasTest\TableTestCase;
 
 class CommentTest extends TableTestCase

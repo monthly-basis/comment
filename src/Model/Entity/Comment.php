@@ -1,8 +1,8 @@
 <?php
-namespace LeoGalleguillos\Comment\Model\Entity;
+namespace MonthlyBasis\Comment\Model\Entity;
 
 use DateTime;
-use LeoGalleguillos\Comment\Model\Entity as CommentEntity;
+use MonthlyBasis\Comment\Model\Entity as CommentEntity;
 use MonthlyBasis\User\Model\Entity as UserEntity;
 
 class Comment

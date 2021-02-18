@@ -1,8 +1,8 @@
 <?php
-namespace LeoGalleguillos\CommentTest\Model\Entity;
+namespace MonthlyBasis\CommentTest\Model\Entity;
 
 use DateTime;
-use LeoGalleguillos\Comment\Model\Entity as CommentEntity;
+use MonthlyBasis\Comment\Model\Entity as CommentEntity;
 use MonthlyBasis\User\Model\Entity as UserEntity;
 use PHPUnit\Framework\TestCase;
 

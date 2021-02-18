@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\CommentTest;
+namespace MonthlyBasis\CommentTest;
 
-use LeoGalleguillos\Comment\Module;
+use MonthlyBasis\Comment\Module;
 use PHPUnit\Framework\TestCase;
 use Laminas\Mvc\Application;
 
