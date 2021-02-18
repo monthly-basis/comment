@@ -2,12 +2,12 @@
 
 return [
     'modules' => [
+        'Laminas\Db',
+        'Laminas\Router',
         'LeoGalleguillos\Comment',
         'MonthlyBasis\Flash',
         'MonthlyBasis\ReCaptcha',
         'MonthlyBasis\User',
-        'Zend\Db',
-        'Zend\Router',
     ],
     // These are various options for the listeners attached to the ModuleManager
     'module_listener_options' => array(
